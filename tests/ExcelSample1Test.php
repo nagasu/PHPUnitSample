@@ -1,6 +1,6 @@
 <?php
 
-class ExcelSampleTest1 extends TestCase
+class ExcelSample1Test extends TestCase
 {
 
     public function testEmpty()

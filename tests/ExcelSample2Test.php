@@ -1,6 +1,6 @@
 <?php
 
-class ExcelSampleTest2 extends TestCase
+class ExcelSample2Test extends TestCase
 {
 
     /**

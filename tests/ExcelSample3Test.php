@@ -1,6 +1,6 @@
 <?php
 
-class ExcelSampleTest3 extends TestCase
+class ExcelSample3Test extends TestCase
 {
 
     public function provider()
@@ -28,7 +28,7 @@ class ExcelSampleTest3 extends TestCase
     public function testConsumer()
     {
         $this->assertEquals(
-            ['provider1', 'first', 'second'],
+            ['provider2', 'first', 'second'],
             func_get_args()
         );
     }

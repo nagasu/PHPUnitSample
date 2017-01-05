@@ -1,0 +1,7 @@
+machine:
+  php:
+    version: 7.0.4
+
+test:
+  pre:
+    - echo "date.timezone = Europe/Berlin" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
