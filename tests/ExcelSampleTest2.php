@@ -3,34 +3,22 @@
 class ExcelSampleTest2 extends TestCase
 {
 
-    public function provider()
-    {
-        return [['provider1'], ['provider2']];
-    }
-
-    public function testProducerFirst()
-    {
-        $this->assertTrue(true);
-        return 'first';
-    }
-
-    public function testProducerSecond()
-    {
-        $this->assertTrue(true);
-        return 'second';
-    }
-
     /**
-     * @depends testProducerFirst
-     * @depends testProducerSecond
-     * @dataProvider provider
+     * @dataProvider additionProvider
      */
-    public function testConsumer()
+    public function testAdd($a, $b, $expected)
     {
-        $this->assertEquals(
-            ['provider1', 'first', 'second'],
-            func_get_args()
-        );
+        $this->assertEquals($expected, $a + $b);
+    }
+
+    public function additionProvider()
+    {
+        return [
+            'adding zeros' => [0, 0, 0],
+            'zero plus one' => [0, 1, 1],
+            'one plus zero' => [1, 0, 1],
+            'one plus one' => [1, 1, 2]
+        ];
     }
 
 }
