@@ -5,7 +5,7 @@ class ExcelSample3Test extends TestCase
 
     public function provider()
     {
-        return [['provider1'], ['provider2']];
+        return [['provider1']];
     }
 
     public function testProducerFirst()
@@ -28,7 +28,7 @@ class ExcelSample3Test extends TestCase
     public function testConsumer()
     {
         $this->assertEquals(
-            ['provider2', 'first', 'second'],
+            ['provider1', 'first', 'second'],
             func_get_args()
         );
     }
